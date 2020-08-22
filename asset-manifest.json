@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/podcastly/static/css/main.187526f9.chunk.css",
+    "main.js": "/podcastly/static/js/main.8cc74c24.chunk.js",
+    "main.js.map": "/podcastly/static/js/main.8cc74c24.chunk.js.map",
+    "runtime-main.js": "/podcastly/static/js/runtime-main.777297a8.js",
+    "runtime-main.js.map": "/podcastly/static/js/runtime-main.777297a8.js.map",
+    "static/js/2.87841bc7.chunk.js": "/podcastly/static/js/2.87841bc7.chunk.js",
+    "static/js/2.87841bc7.chunk.js.map": "/podcastly/static/js/2.87841bc7.chunk.js.map",
+    "index.html": "/podcastly/index.html",
+    "precache-manifest.f6000368a943e61c98df5a81f78b78b0.js": "/podcastly/precache-manifest.f6000368a943e61c98df5a81f78b78b0.js",
+    "service-worker.js": "/podcastly/service-worker.js",
+    "static/css/main.187526f9.chunk.css.map": "/podcastly/static/css/main.187526f9.chunk.css.map",
+    "static/js/2.87841bc7.chunk.js.LICENSE.txt": "/podcastly/static/js/2.87841bc7.chunk.js.LICENSE.txt",
+    "static/media/laptop-1.jfif": "/podcastly/static/media/laptop-1.25df958a.jfif",
+    "static/media/laptop-2.jpg": "/podcastly/static/media/laptop-2.aba139d9.jpg",
+    "static/media/laptop-3.jpg": "/podcastly/static/media/laptop-3.7642b6cd.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.777297a8.js",
+    "static/js/2.87841bc7.chunk.js",
+    "static/css/main.187526f9.chunk.css",
+    "static/js/main.8cc74c24.chunk.js"
+  ]
+}
