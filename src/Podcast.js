@@ -31,7 +31,7 @@ const theme = createMuiTheme({
 
 export default function Podcast() {
   return (
-    <Router basename={process.env.NODE_ENV + "/"}>
+    <Router basename={process.env.PUBLIC_URL}>
       <ThemeProvider theme={theme}>
         <Header />
         <CssBaseline />
