@@ -16,9 +16,9 @@ export default function Demo({match}) {
   return (
     <>
       { demo ?
-        <Container style={{height: 400, padding: 50}} maxWidth="md">
+        <Container style={{height: 450, padding: 25}} maxWidth="md">
           <Typography variant="h4" align="center" paragraph>
-            {demo.name}
+            <b>{demo.name}</b>
           </Typography>
           <Typography paragraph>
             {demo.desc}
@@ -40,7 +40,7 @@ export default function Demo({match}) {
                 <b>Demo {id} Not Found</b>
               </Typography>
               <Box mt={5}>
-                <Button href="/demos" color="primary" size="large" variant="contained">
+                <Button href={process.env.PUBLIC_URL + "/demos"} color="primary" size="large" variant="contained">
                   <ArrowLeftIcon />
                   Back to Demos
                 </Button>

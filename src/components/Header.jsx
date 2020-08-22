@@ -83,7 +83,7 @@ export default function Header(props) {
               color="inherit"
               className={classes.logo}
             >
-              <Link href="/" color="inherit">
+              <Link href={process.env.PUBLIC_URL + "/"} color="inherit">
                 {'podcastly'}
               </Link>
             </Typography>
@@ -94,7 +94,7 @@ export default function Header(props) {
                     key={index}
                     className={classes.navBtn} 
                     variant="text"
-                    href={link.href}
+                    href={process.env.PUBLIC_URL + link.href}
                   >
                     {link.name}
                   </Button>
@@ -105,7 +105,7 @@ export default function Header(props) {
                 className={classes.navBtn} 
                 variant="text" 
                 style={{marginLeft: 'auto'}}
-                href="/login"
+                href={process.env.PUBLIC_URL + "/login"}
               >
                 Login
               </Button>
@@ -115,7 +115,7 @@ export default function Header(props) {
                 color="primary"
                 variant="contained"
                 disableElevation
-                href="/register"
+                href={process.env.PUBLIC_URL + "/register"}
               >
                 Sign Up
               </Button>

@@ -20,7 +20,7 @@ export default function Demos() {
             <ListItem 
               button 
               component="a" 
-              href={'/demos/' + demo.id} 
+              href={process.env.PUBLIC_URL + '/demos/' + demo.id} 
               key={demo.id}
             >
               <ListItemText primary={demo.name} secondary={demo.desc} />

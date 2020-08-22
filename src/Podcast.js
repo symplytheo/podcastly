@@ -31,18 +31,18 @@ const theme = createMuiTheme({
 
 export default function Podcast() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <ThemeProvider theme={theme}>
         <Header />
         <CssBaseline />
         <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route path="/login" component={SignIn} />
-          <Route path="/register" component={SignUp} />
-          <Route path="/features" component={Features} />
-          <Route exact path="/demos" component={Demos} />
-          <Route path="/demos/:id" component={Demo} />
-          <Route path="/blog" component={Blog} />
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={Homepage} />
+          <Route path={process.env.PUBLIC_URL + '/login'} component={SignIn} />
+          <Route path={process.env.PUBLIC_URL + '/register'} component={SignUp} />
+          <Route path={process.env.PUBLIC_URL + "/features"} component={Features} />
+          <Route exact path={process.env.PUBLIC_URL + "/demos"} component={Demos} />
+          <Route path={process.env.PUBLIC_URL + "/demos/:id"} component={Demo} />
+          <Route path={process.env.PUBLIC_URL + "/blog"} component={Blog} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

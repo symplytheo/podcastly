@@ -41,9 +41,6 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     paddingLeft: theme.spacing(4)
   },
-  accent: {
-    color: theme.palette.accent.main
-  },
   step: {
     border: `5px solid ${theme.palette.primary.main}`,
     borderRadius: '50%',

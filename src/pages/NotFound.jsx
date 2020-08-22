@@ -12,14 +12,14 @@ export default function NotFound() {
         style={{height: '100%', textAlign: 'center'}}
       >
         <Grid item xs={12}>
-          <Typography variant="h2" display="block" paragraph>
+          <Typography variant="h1" display="block" paragraph>
             <b>404 Error</b>
           </Typography>
           <Typography variant="h3" display="block" paragraph>
             <b>Page Not Found</b>
           </Typography>
           <Box mt={5}>
-            <Button href="/" color="primary" size="large" variant="contained">
+            <Button href={process.env.PUBLIC_URL + "/"} color="primary" size="large" variant="contained">
               <ArrowLeftIcon />
               Back to Home
             </Button>
