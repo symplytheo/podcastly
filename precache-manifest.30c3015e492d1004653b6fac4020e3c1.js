@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fcfe5379d23a46d22aa83752fbb792c3",
+    "revision": "a1d28731f1495e7a463fa6243b8defef",
     "url": "/podcastly/index.html"
   },
   {
-    "revision": "a16a4a5fcc1b17ab70f9",
+    "revision": "10d6ebbe809dfc06b011",
     "url": "/podcastly/static/css/main.187526f9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/podcastly/static/js/2.d37b4dd5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a16a4a5fcc1b17ab70f9",
-    "url": "/podcastly/static/js/main.b560b3c9.chunk.js"
+    "revision": "10d6ebbe809dfc06b011",
+    "url": "/podcastly/static/js/main.862b0108.chunk.js"
   },
   {
     "revision": "8224a71e54934f9ec014",
