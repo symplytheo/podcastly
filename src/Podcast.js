@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, HashRouter } from 'react-router-dom'
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 import {deepPurple} from '@material-ui/core/colors'
@@ -38,7 +38,7 @@ const theme = createMuiTheme({
 
 export default function Podcast() {
   return (
-    <HashRouter basename='/'>
+    <Router basename={process.env.NODE_ENV}>
       <ThemeProvider theme={theme}>
         <Header />
         <CssBaseline />
@@ -54,7 +54,7 @@ export default function Podcast() {
         </Switch>
         <Footer />
       </ThemeProvider>
-    </HashRouter>   
+    </Router>   
   )
 }
 
