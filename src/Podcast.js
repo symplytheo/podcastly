@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Switch, HashRouter as Router } from 'react-router-dom'
 import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 import {deepPurple} from '@material-ui/core/colors'
 import { CssBaseline } from '@material-ui/core';
@@ -36,11 +36,11 @@ export default function Podcast() {
         <Header />
         <CssBaseline />
         <Switch>
-          <Route exact path={process.env.PUBLIC_URL + '/'} component={Homepage} />
-          <Route path={process.env.PUBLIC_URL + '/login'} component={SignIn} />
-          <Route path={process.env.PUBLIC_URL + '/register'} component={SignUp} />
+          <Route exact path='/' component={Homepage} />
+          <Route path='/login' component={SignIn} />
+          <Route path='/register' component={SignUp} />
           <Route path={process.env.PUBLIC_URL + "/features"} component={Features} />
-          <Route exact path={process.env.PUBLIC_URL + "/demos"} component={Demos} />
+          <Route exact path='/demo' component={Demos} />
           <Route path={process.env.PUBLIC_URL + "/demos/:id"} component={Demo} />
           <Route path={process.env.PUBLIC_URL + "/blog"} component={Blog} />
           <Route component={NotFound} />
