@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography, Grid, Button, Box } from '@material-ui/core';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft'
+import { NavLink } from 'react-router-dom';
 
 const demos = [
   { id: 1, name: 'My first podcast', desc: 'some description here...' },
@@ -34,16 +35,18 @@ export default function Demo({match}) {
           >
             <Grid item xs={12}>
               <Typography variant="h1" display="block" paragraph>
-                <b>404 Error</b>
+                <b>404</b>
               </Typography>
               <Typography variant="h3" display="block" paragraph>
                 <b>Demo {id} Not Found</b>
               </Typography>
               <Box mt={5}>
-                <Button href={process.env.PUBLIC_URL + "/demos"} color="primary" size="large" variant="contained">
-                  <ArrowLeftIcon />
-                  Back to Demos
-                </Button>
+                <NavLink to="/demos">
+                  <Button color="primary" size="large" variant="contained">
+                    <ArrowLeftIcon />
+                    Back to Demos
+                  </Button>
+                </NavLink>
               </Box>
             </Grid>
           </Grid>

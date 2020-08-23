@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import {NavLink, Link} from 'react-router-dom';
 import { 
-  AppBar, Box, Drawer, Divider, Toolbar, Button, List, ListItem, ListItemText, Typography,
-  ButtonGroup, Hidden, IconButton, useScrollTrigger, Slide, Link
+  AppBar, Box, Drawer, Divider, Toolbar, Button, List, ListItem, ListItemText, 
+  Typography, ButtonGroup, Hidden, IconButton, useScrollTrigger, Slide, 
 } from '@material-ui/core';
 import CastIcon from '@material-ui/icons/Cast';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -12,6 +13,10 @@ const useStyles = makeStyles(theme => ({
   appBar: {
     backgroundColor: 'white',
     ...theme.mixins.container
+  },
+  logoLink: {
+    textDecoration: 'none', 
+    color: theme.palette.primary.main
   },
   drawerPaper: {
     width: 240
@@ -26,7 +31,14 @@ const useStyles = makeStyles(theme => ({
   navBtn: {
     textTransform: 'capitalize',
     fontWeight: 600,
-    margin: '0 10px'
+    margin: '0 10px',
+  },
+  navRegLink: {
+    textDecoration: 'none',
+    color: theme.palette.background.paper,
+  },
+  activeNav: {
+    color: theme.palette.primary.main
   },
   OpenDrawerBtn: {
     marginLeft: 'auto',
@@ -77,48 +89,60 @@ export default function Header(props) {
             <Box className={classes.logoIcon}>
               <CastIcon/>
             </Box>
-            <Typography 
-              component="h1" 
-              variant="h5" 
-              color="inherit"
-              className={classes.logo}
-            >
-              <Link href={process.env.PUBLIC_URL + "/"} color="inherit">
-                {'podcastly'}
-              </Link>
-            </Typography>
+            <Link to="/" style={{textDecoration: 'none'}}>
+              <Typography 
+                component="h1" 
+                variant="h5" 
+                color="primary"
+                className={classes.logo}
+              >
+                  {'podcastly'}
+              </Typography>
+
+            </Link>
             <Hidden smDown>
               <ButtonGroup>
-                {navLinks.map((link, index) => (
-                  <Button
-                    key={index}
-                    className={classes.navBtn} 
-                    variant="text"
-                    href={process.env.PUBLIC_URL + link.href}
+                {navLinks.map((nav, index) => (
+                  <NavLink 
+                    to={nav.href}
+                    key={index} 
+                    style={{textDecoration: 'none'}} 
                   >
-                    {link.name}
-                  </Button>
+                    <Button
+                      color="textPrimary"
+                      className={classes.navBtn} 
+                      variant="text"
+                    >
+                        {nav.name}
+                    </Button>
+                  </NavLink>
                 ))}
               </ButtonGroup>
-                
-              <Button 
-                className={classes.navBtn} 
-                variant="text" 
-                style={{marginLeft: 'auto'}}
-                href="/login"
-              >
-                Login
-              </Button>
+              <NavLink 
+                to="/login" 
+                style={{textDecoration: 'none', marginLeft: 'auto'}} 
+              >  
+                <Button 
+                  className={classes.navBtn} 
+                  variant="text" 
+                >
+                  Login
+                </Button>
+              </NavLink>
 
-              <Button  
-                className={classes.navBtn} 
-                color="primary"
-                variant="contained"
-                disableElevation
-                href="/register"
+              <NavLink 
+                to="/register" 
+                style={{textDecoration: 'none'}}
               >
-                Sign Up
-              </Button>
+                <Button  
+                  className={classes.navBtn} 
+                  color="primary"
+                  variant="contained"
+                  disableElevation
+                >
+                    Sign Up
+                </Button>
+              </NavLink>
             </Hidden>
             
             <IconButton  
@@ -132,7 +156,7 @@ export default function Header(props) {
       </HideOnScroll>
       <Box mt={7} />
       <Drawer 
-        variant="persistent" 
+        variant="temporary" 
         onClose={toggleDrawer} 
         open={navDrawer}
         anchor="right"
@@ -147,12 +171,36 @@ export default function Header(props) {
           </IconButton>
         </Box>
         <Divider />
-        <List>
-          {navLinks.map((link, i) => (
-            <ListItem button key={i} href={link.href} component="a">
-              <ListItemText primary={link.name} />
-            </ListItem>
+        <List color="textPrimary">
+          {navLinks.map((item, i) => (
+            <NavLink 
+              to={item.href} 
+              style={{textDecoration: 'none', color: 'rgba(0,0,0,0.9)'}}
+              onClick={toggleDrawer}
+            >
+              <ListItem button key={i}>
+                <ListItemText primary={item.name} />
+              </ListItem>
+            </NavLink>
           ))}
+          <NavLink 
+            to="/login" 
+            style={{textDecoration: 'none', color: 'rgba(0,0,0,0.9)'}}
+            onClick={toggleDrawer}
+          >
+            <ListItem button>
+              <ListItemText primary="Login" />
+            </ListItem>
+          </NavLink>
+          <NavLink 
+            to="/register" 
+            style={{textDecoration: 'none', color: 'rgba(0,0,0,0.9)'}}
+            onClick={toggleDrawer}
+          >
+            <ListItem button>
+              <ListItemText primary="Sign Up" />
+            </ListItem>
+          </NavLink>
         </List>
       </Drawer>
     </React.Fragment>

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Typography, Grid, Link, IconButton } from '@material-ui/core'
+import { Link } from 'react-router-dom'
+import { Typography, Grid, IconButton } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import FacebookIcon from '@material-ui/icons/Facebook'
@@ -20,6 +21,10 @@ const useStyles = makeStyles(theme => ({
   link: {
     display: 'inline-block',
     margin: theme.spacing(1)
+  },
+  footLink: {
+    textDecoration: 'none',
+    color: 'rgba(0,0,0,0.6)'
   }
 }))
 
@@ -43,14 +48,15 @@ export default function Footer() {
       >
         <Grid item xs={12} sm={10} md={8}>
           {footLinks.map((fLink, f) => (
-            <Typography 
-              color="textSecondary" 
-              variant="body2" 
-              className={classes.link}
-              key={f}
-            >
-              <Link color="inherit" href={fLink.href}>{fLink.text}</Link>
-            </Typography>
+            <Link to={fLink.href} key={f}>
+              <Typography 
+                color="textSecondary" 
+                variant="body2" 
+                className={classes.link}
+              >
+                {fLink.text}
+              </Typography>
+            </Link>
           ))}
         </Grid>
         <Grid item xs={12} sm={10} md={8}>
@@ -63,7 +69,15 @@ export default function Footer() {
         <Grid item xs={12} sm={10} md={8}>
           <Typography color="textSecondary" variant="body2">
             <span>&copy; 2008 - { new Date().getFullYear() } </span>
-            <Link color="inherit">{'Podcastly.'}</Link>
+            <Link style={{textDecoration: 'none'}}>
+              <Typography 
+                color="textSecondary" 
+                variant="body2" 
+                style={{display: 'inline'}}
+              >
+                {'Podcastly.'}
+              </Typography>
+            </Link>
             {` All rights reserved. Lorem ipsum dolor sit amet, consectetur 
             adipisicing elit. Est blanditiis dolorem culpa incidunt minus,
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est 

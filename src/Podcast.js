@@ -1,8 +1,8 @@
-import React from 'react';
-import { Route, Switch, Link, BrowserRouter as Router } from 'react-router-dom'
-import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
+import React from 'react'
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
+import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles'
 import {deepPurple} from '@material-ui/core/colors'
-import { CssBaseline } from '@material-ui/core';
+import { CssBaseline } from '@material-ui/core'
 import Header from './components/Header'
 import Footer from './components/Footer'
 //Components to render as page
@@ -34,28 +34,13 @@ export default function Podcast() {
     <Router basename={process.env.PUBLIC_URL}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/blog">About</Link>
-              </li>
-              <li>
-                <Link to="/features">Users</Link>
-              </li>
-              <li>
-                <Link to="/demos">Users</Link>
-              </li>
-            </ul>
-          </nav>
+        <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/login" component={SignIn} />
           <Route exact path="/register" component={SignUp} />
           <Route exact path="/features" component={Features} />
-          <Route exact path="/demo" component={Demos} />
+          <Route exact path="/demos" component={Demos} />
           <Route excat path="/demos/:id" component={Demo} />
           <Route exact path="/blog" component={Blog} />
           <Route component={NotFound} />

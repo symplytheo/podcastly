@@ -1,11 +1,12 @@
 import React from 'react'
 import { Typography, List, ListItem, ListItemText } from '@material-ui/core'
+import { NavLink } from 'react-router-dom'
 
 const demos = [
-  { id: 1, name: 'My first podcast', desc: 'some description here...' },
-  { id: 2, name: 'My second podcast', desc: 'some description here...' },
-  { id: 3, name: 'My third podcast', desc: 'some description here...' },
-  { id: 4, name: 'My fourth podcast', desc: 'some description here...' }
+  { id: 1, name: 'My First Podcast', desc: 'some description here...' },
+  { id: 2, name: 'My Second Podcast', desc: 'some description here...' },
+  { id: 3, name: 'My Third Podcast', desc: 'some description here...' },
+  { id: 4, name: 'My Fourth Podcast', desc: 'some description here...' }
 ]
 
 export default function Demos() {
@@ -17,14 +18,15 @@ export default function Demos() {
         </Typography>
         <List>
           {demos.map(demo => (
-            <ListItem 
-              button 
-              component="a" 
-              href={process.env.PUBLIC_URL + '/demos/' + demo.id} 
-              key={demo.id}
+            <NavLink 
+              key={demo.id} 
+              to={'/demos/' + demo.id} 
+              style={{textDecoration: 'none', color: 'rgba(0,0,0,0.9)'}}
             >
-              <ListItemText primary={demo.name} secondary={demo.desc} />
-            </ListItem>
+              <ListItem button>
+                <ListItemText primary={demo.name} secondary={demo.desc} />
+              </ListItem>
+            </NavLink>
           ))}
         </List>
       </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Typography, Grid, Button, Container, Box } from '@material-ui/core'
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft'
 
@@ -13,16 +14,18 @@ export default function NotFound() {
       >
         <Grid item xs={12}>
           <Typography variant="h1" display="block" paragraph>
-            <b>404 Error</b>
+            <b>404</b>
           </Typography>
           <Typography variant="h3" display="block" paragraph>
             <b>Page Not Found</b>
           </Typography>
           <Box mt={5}>
-            <Button href={process.env.PUBLIC_URL + "/"} color="primary" size="large" variant="contained">
-              <ArrowLeftIcon />
-              Back to Home
-            </Button>
+            <Link to="/" style={{textDecoration: 'none'}}>
+              <Button color="primary" size="large" variant="contained">
+                <ArrowLeftIcon />
+                Back to Home
+              </Button>
+            </Link>
           </Box>
         </Grid>
       </Grid>
