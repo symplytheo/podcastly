@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/podcastly/static/css/main.187526f9.chunk.css",
-    "main.js": "/podcastly/static/js/main.862b0108.chunk.js",
-    "main.js.map": "/podcastly/static/js/main.862b0108.chunk.js.map",
+    "main.js": "/podcastly/static/js/main.47419ef5.chunk.js",
+    "main.js.map": "/podcastly/static/js/main.47419ef5.chunk.js.map",
     "runtime-main.js": "/podcastly/static/js/runtime-main.777297a8.js",
     "runtime-main.js.map": "/podcastly/static/js/runtime-main.777297a8.js.map",
     "static/js/2.d37b4dd5.chunk.js": "/podcastly/static/js/2.d37b4dd5.chunk.js",
     "static/js/2.d37b4dd5.chunk.js.map": "/podcastly/static/js/2.d37b4dd5.chunk.js.map",
     "index.html": "/podcastly/index.html",
-    "precache-manifest.30c3015e492d1004653b6fac4020e3c1.js": "/podcastly/precache-manifest.30c3015e492d1004653b6fac4020e3c1.js",
+    "precache-manifest.e5da269ac65aa0e8a511f5cabd727853.js": "/podcastly/precache-manifest.e5da269ac65aa0e8a511f5cabd727853.js",
     "service-worker.js": "/podcastly/service-worker.js",
     "static/css/main.187526f9.chunk.css.map": "/podcastly/static/css/main.187526f9.chunk.css.map",
     "static/js/2.d37b4dd5.chunk.js.LICENSE.txt": "/podcastly/static/js/2.d37b4dd5.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.777297a8.js",
     "static/js/2.d37b4dd5.chunk.js",
     "static/css/main.187526f9.chunk.css",
-    "static/js/main.862b0108.chunk.js"
+    "static/js/main.47419ef5.chunk.js"
   ]
 }
