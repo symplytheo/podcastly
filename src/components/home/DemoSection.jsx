@@ -17,15 +17,15 @@ demo: {
 },
 card: {
   height: '100%', 
-  width: 125
+  marginRight: theme.spacing(2)
 },
 cardImg: {
   height: '100%'
 },
 progress: {
-  height: 8, 
+  height: 7, 
   borderRadius: 15, 
-  marginRight: theme.spacing(2) 
+  margin: theme.spacing(0, 2) 
 },
 subtitle: {
   fontSize: 12,
@@ -63,12 +63,12 @@ export default function DemoSection() {
           <Grid item xs={12} sm={11} md={6} className={classes.demo} key={i}>
             <Paper elevation={0}>
               <Grid container>
-                <Grid item xs={4} lg={3}>
+                <Grid item xs={5} sm={4} lg={3}>
                   <Card className={classes.card} elevation={0}>
                   <CardMedia component="img" src={laptop1} className={classes.cardImg}/>
                   </Card>
                 </Grid>
-                <Grid item xs={8} lg={9} style={{padding:'10px  5px'}}>
+                <Grid item xs={7} sm={8} lg={9} style={{padding:'10px  5px'}}>
                   <Typography className={classes.subtitle}>
                     <b>PODCASTLY DEMO</b> SEASON 1 EPISODE {i+1}
                   </Typography>

@@ -18,7 +18,7 @@ import DemoSection from '../components/home/DemoSection'
 const useStyles = makeStyles(theme => ({
   intro: {
     backgroundImage: 'linear-gradient(135deg, #651fff 40%, #7c4dff 60%)',
-    height: 450,
+    padding: theme.spacing(8, 0),
     color: 'white'
   },
   introHeadline: {
@@ -85,7 +85,7 @@ const useStyles = makeStyles(theme => ({
   },
   outro: {
     background: theme.palette.primary.main,
-    height: 250,
+    padding: theme.spacing(8, 0),
     color: 'white',
     textAlign: 'center',
     marginTop: theme.spacing(2)
