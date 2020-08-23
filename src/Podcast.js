@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, HashRouter as Router } from 'react-router-dom'
+import { Route, Switch, Link, BrowserRouter as Router } from 'react-router-dom'
 import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 import {deepPurple} from '@material-ui/core/colors'
 import { CssBaseline } from '@material-ui/core';
@@ -31,18 +31,33 @@ const theme = createMuiTheme({
 
 export default function Podcast() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <ThemeProvider theme={theme}>
-        <Header />
         <CssBaseline />
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/blog">About</Link>
+              </li>
+              <li>
+                <Link to="/features">Users</Link>
+              </li>
+              <li>
+                <Link to="/demos">Users</Link>
+              </li>
+            </ul>
+          </nav>
         <Switch>
-          <Route exact path='/' component={Homepage} />
-          <Route path='/login' component={SignIn} />
-          <Route path='/register' component={SignUp} />
-          <Route path={process.env.PUBLIC_URL + "/features"} component={Features} />
-          <Route exact path='/demo' component={Demos} />
-          <Route path={process.env.PUBLIC_URL + "/demos/:id"} component={Demo} />
-          <Route path={process.env.PUBLIC_URL + "/blog"} component={Blog} />
+          <Route exact path="/" component={Homepage} />
+          <Route exact path="/login" component={SignIn} />
+          <Route exact path="/register" component={SignUp} />
+          <Route exact path="/features" component={Features} />
+          <Route exact path="/demo" component={Demos} />
+          <Route excat path="/demos/:id" component={Demo} />
+          <Route exact path="/blog" component={Blog} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

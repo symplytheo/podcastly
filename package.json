@@ -1,6 +1,6 @@
 {
   "name": "podcastly",
-  "homepage": "https://symplytheo.github.io/podcastly/",
+  "homepage": "https://symplytheo.github.io/podcastly",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,7 +17,7 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",

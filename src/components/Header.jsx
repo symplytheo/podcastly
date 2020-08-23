@@ -105,7 +105,7 @@ export default function Header(props) {
                 className={classes.navBtn} 
                 variant="text" 
                 style={{marginLeft: 'auto'}}
-                href={process.env.PUBLIC_URL + "/login"}
+                href="/login"
               >
                 Login
               </Button>
@@ -115,7 +115,7 @@ export default function Header(props) {
                 color="primary"
                 variant="contained"
                 disableElevation
-                href={process.env.PUBLIC_URL + "/register"}
+                href="/register"
               >
                 Sign Up
               </Button>

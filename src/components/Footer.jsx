@@ -31,7 +31,7 @@ export default function Footer() {
     {text: 'Pricing', href: '/pricing'}, 
     {text: 'Contact', href: '/contact'}, 
     {text: 'Privacy Policy', href: '/privacy'}, 
-    {text: 'Terms of Service', href: 'terms'}
+    {text: 'Terms of Service', href: '/terms'}
   ]
 
   return (
