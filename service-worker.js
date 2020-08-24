@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/podcastly/precache-manifest.9c6b5387f179aa121bcebae85de7be47.js"
+  "/podcastly/precache-manifest.baeb990f745fc6fe5cf8cc68cdf4377c.js"
 );
 
 self.addEventListener('message', (event) => {
